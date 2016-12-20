@@ -28,10 +28,10 @@ function draw() {
     
   // mouth
   push();
-  translate(5,120);
+  translate(5,115);
   noStroke();
   fill('#4c2c22');
-  var size = map(volume*2,0,1,width/14,width/12);
+  var size = map(volume*2,0,1,width/14,width/10);
   arc(0, 0, size, size, 0, PI, CHORD);
   pop(); 
     
@@ -72,7 +72,7 @@ function draw() {
     var noseColor = lerpColor(startingColor,endingColor,volume*2);
     fill(noseColor);
     noStroke();
-    var size = map(volume*2,0,1,width/14,width/12);
+    var size = map(volume*2,0,1,width/14,width/13);
     ellipse(50,50,size,size/1.2);
     pop();
     
