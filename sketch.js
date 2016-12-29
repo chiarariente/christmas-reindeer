@@ -53,14 +53,14 @@ function draw() {
     // eye R
     push();
     rotate(PI);
-    var eyeX = -15;
-    var eyeY = -60;
-    var eyeSizeX = 15;
-    var eyeSizeY = 18;
+    eyeX = -15;
+    eyeY = -60;
+    eyeSizeX = 15;
+    eyeSizeY = 18;
     fill('#4c2c22');
     noStroke();
     ellipse(eyeX,eyeY,eyeSizeX,eyeSizeY);
-    var eyelidShift = map(volume,0,1,18,14);
+    eyelidShift = map(volume,0,1,18,14);
     fill('#b7845d');
     ellipse(eyeX,eyeY-eyelidShift,eyeSizeX,eyeSizeY);
     line(0,0,0,20);
@@ -72,7 +72,7 @@ function draw() {
     var noseColor = lerpColor(startingColor,endingColor,volume*2);
     fill(noseColor);
     noStroke();
-    var size = map(volume*2,0,1,width/14,width/13);
+    size = map(volume*2,0,1,width/14,width/13);
     ellipse(50,50,size,size/1.2);
     pop();
     
